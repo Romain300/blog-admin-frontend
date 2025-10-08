@@ -36,7 +36,7 @@ function Dashboard() {
         const payload = { published: newState };
        
         try {
-            const response = await fetch(`http://localhost:3000/posts/${idPost}/updateStatus`, {
+            const response = await fetch(`https://blog-backend-production-9082.up.railway.app/posts/${idPost}/updateStatus`, {
                 mode: "cors",
                 method: "PUT",
                 headers: {
@@ -70,7 +70,7 @@ function Dashboard() {
 
     const deletePost = async () => {
         try {
-            const response = await fetch(`http://localhost:3000/posts/${selectedPost}`, {
+            const response = await fetch(`https://blog-backend-production-9082.up.railway.app/posts/${selectedPost}`, {
                 mode: "cors",
                 method: "DELETE",
                 headers: {
@@ -103,7 +103,7 @@ function Dashboard() {
     useEffect(() => {
         const fetchPosts = async() => {
             try {
-                const response = await fetch("http://localhost:3000/posts", {
+                const response = await fetch("https://blog-backend-production-9082.up.railway.app/posts", {
                     mode: "cors",
                     headers: { "Content-type": "application/json"}
                 });

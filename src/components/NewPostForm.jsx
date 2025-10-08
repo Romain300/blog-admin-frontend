@@ -29,7 +29,7 @@ function NewPostForm() {
         event.preventDefault();
 
         try {
-            const response = await fetch("http://localhost:3000/posts", {
+            const response = await fetch("https://blog-backend-production-9082.up.railway.app/posts", {
                 mode: "cors",
                 method: "POST",
                 headers: { 
